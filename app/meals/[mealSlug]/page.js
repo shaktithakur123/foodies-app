@@ -3,6 +3,9 @@ import classes from './page.module.css'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
+// Force dynamic rendering to prevent build-time database calls
+export const dynamic = 'force-dynamic';
+
 export default async function MealDetailsPage({params}) {
     const param = await params;
     const meal = await getMeal(param.mealSlug)

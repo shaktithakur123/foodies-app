@@ -4,6 +4,9 @@ import MealsGrid from "@/components/meals/meals-grid";
 import { getMeals } from "@/lib/meals";
 import { Suspense } from "react";
 
+// Force dynamic rendering to prevent build-time database calls
+export const dynamic = 'force-dynamic';
+
 async function Meals(){
     const meals = await getMeals();
     return <MealsGrid meals={meals} />
