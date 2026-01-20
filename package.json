@@ -2,15 +2,20 @@
   "name": "explorer",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup-db": "node scripts/setup-db.js"
   },
   "dependencies": {
+    "@vercel/postgres": "^0.10.0",
     "better-sqlite3": "^11.6.0",
+    "dotenv": "^17.2.3",
     "next": "^16.1.4",
+    "pg": "^8.17.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "slugify": "^1.6.6",
